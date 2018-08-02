@@ -30,7 +30,10 @@ original object}
 
 \item{...}{Custom options to be passed to \code{\link{write.table}} (if the
 object is a table-like) Defaults to sane line-break and tab standards based
-on the operating system.}
+on the operating system. Note that clipr defaults to calling
+\code{\link{write.table}} with `col.names = FALSE`, so make sure to set
+`col.names = TRUE` if you do want to emit table column names to the
+clipboard.}
 }
 \value{
 Invisibly returns the original object
